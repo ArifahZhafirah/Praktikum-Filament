@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Category;
 
 class Post extends Model
 {
@@ -21,7 +22,7 @@ class Post extends Model
     protected $casts = [
         'tags' => 'array',
         'published' => 'boolean',
-        'published' => 'date',
+        'published_at' => 'datetime',
     ];
 
     public function category()
