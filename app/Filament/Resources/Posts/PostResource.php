@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\Posts;
+namespace App\Filament\Resources\Posts\RelationManagers;
 
 use App\Filament\Resources\Posts\Pages\CreatePost;
 use App\Filament\Resources\Posts\Pages\EditPost;
@@ -13,6 +13,7 @@ use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
+use App\Filament\Resources\Posts\RelationManagers\TagsRelationManager;
 
 class PostResource extends Resource
 {
@@ -35,7 +36,7 @@ class PostResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            TagsRelationManager::class,
         ];
     }
 
